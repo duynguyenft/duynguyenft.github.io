@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style> /* GRID */
+    .grid {
+      width: 100%;
+      display: block;
+    }
+    
+    .wide {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .row {
+      margin: 0 -16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .row.no-gutters {
+      margin: 0;
+    }
+    
+    .col {
+      padding: 0 16px;
+    }
+    
+    .row.no-gutters .col {
+      padding: 0;
+    }
+    
+    .p-0 {
+      display: none;
+    }
+    
+    .p-1 {
+      flex: 0 0 8.33333%;
+      max-width: 8.33333%;
+      display: block;
+    }
+    
+    .p-2 {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+      display: block;
+    }
+    
+    .p-2-4 {
+      flex: 0 0 20%;
+      max-width: 20%;
+      display: block;
+    }
+    
+    .p-3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      display: block;
+    }
+    
+    .p-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+      display: block;
+    }
+    
+    .p-5 {
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%;
+      display: block;
+    }
+    
+    .p-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      display: block;
+    }
+    
+    .p-7 {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%;
+      display: block;
+    }
+    
+    .p-8 {
+      flex: 0 0 66.666667%;
+      max-width: 66.66667%;
+      display: block;
+    }
+    
+    .p-9 {
+      flex: 0 0 75%;
+      max-width: 75%;
+      display: block;
+    }
+    
+    .p-10 {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%;
+      display: block;
+    }
+    
+    .p-11 {
+      flex: 0 0 91.66667%;
+      max-width: 91.66667%;
+      display: block;
+    }
+    
+    .p-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      display: block;
+    }
+    
+    .p-o-1 {
+      margin-left: 8.33333%;
+    }
+    
+    .p-o-2 {
+      margin-left: 16.66667%;
+    }
+    
+    .p-o-3 {
+      margin-left: 25%;
+    }
+    
+    .p-o-4 {
+      margin-left: 33.33333%;
+    }
+    
+    .p-o-5 {
+      margin-left: 41.66667%;
+    }
+    
+    .p-o-6 {
+      margin-left: 50%;
+    }
+    
+    .p-o-7 {
+      margin-left: 58.33333%;
+    }
+    
+    .p-o-8 {
+      margin-left: 66.66667%;
+    }
+    
+    .p-o-9 {
+      margin-left: 75%;
+    }
+    
+    .p-o-10 {
+      margin-left: 83.33333%;
+    }
+    
+    .p-o-11 {
+      margin-left: 91.66667%;
+    }
+    
+    @media (max-width: 739px) {
+      .row {
+        margin: 0 -4px;
+      }
+      
+      .col {
+        padding: 0 4px;
+      }
+      
+      .m-0 {
+        display: none;
+      }
+    
+      .m-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+        display: block;
+      }
+    
+      .m-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+        display: block;
+      }
+    
+      .m-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        display: block;
+      }
+    
+      .m-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: block;
+      }
+    
+      .m-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        display: block;
+      }
+    
+      .m-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+        display: block;
+      }
+    
+      .m-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: block;
+      }
+    
+      .m-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+        display: block;
+      }
+    
+      .m-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.66667%;
+        display: block;
+      }
+    
+      .m-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+        display: block;
+      }
+    
+      .m-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+        display: block;
+      }
+    
+      .m-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+        display: block;
+      }
+    
+      .m-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: block;
+      }
+    
+      .m-o-1 {
+        margin-left: 8.33333%;
+      }
+    
+      .m-o-2 {
+        margin-left: 16.66667%;
+      }
+    
+      .m-o-3 {
+        margin-left: 25%;
+      }
+    
+      .m-o-4 {
+        margin-left: 33.33333%;
+      }
+    
+      .m-o-5 {
+        margin-left: 41.66667%;
+      }
+    
+      .m-o-6 {
+        margin-left: 50%;
+      }
+    
+      .m-o-7 {
+        margin-left: 58.33333%;
+      }
+    
+      .m-o-8 {
+        margin-left: 66.66667%;
+      }
+    
+      .m-o-9 {
+        margin-left: 75%;
+      }
+    
+      .m-o-10 {
+        margin-left: 83.33333%;
+      }
+    
+      .m-o-11 {
+        margin-left: 91.66667%;
+      }
+    }
+    
+    @media (min-width: 740px) and (max-width: 1023px) {
+      .wide {
+        width: 644px;
+      }
+      
+      .row {
+        margin: 0 -8px;
+      }
+      
+      .col {
+        padding: 0 8px;
+      }
+      
+      .t-0 {
+        display: none;
+      }
+    
+      .t-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+        display: block;
+      }
+    
+      .t-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+        display: block;
+      }
+    
+      .t-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        display: block;
+      }
+    
+      .t-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: block;
+      }
+    
+      .t-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        display: block;
+      }
+    
+      .t-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+        display: block;
+      }
+    
+      .t-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: block;
+      }
+    
+      .t-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+        display: block;
+      }
+    
+      .t-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.66667%;
+        display: block;
+      }
+    
+      .t-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+        display: block;
+      }
+    
+      .t-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+        display: block;
+      }
+    
+      .t-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+        display: block;
+      }
+    
+      .t-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: block;
+      }
+    
+      .t-o-1 {
+        margin-left: 8.33333%;
+      }
+    
+      .t-o-2 {
+        margin-left: 16.66667%;
+      }
+    
+      .t-o-3 {
+        margin-left: 25%;
+      }
+    
+      .t-o-4 {
+        margin-left: 33.33333%;
+      }
+    
+      .t-o-5 {
+        margin-left: 41.66667%;
+      }
+    
+      .t-o-6 {
+        margin-left: 50%;
+      }
+    
+      .t-o-7 {
+        margin-left: 58.33333%;
+      }
+    
+      .t-o-8 {
+        margin-left: 66.66667%;
+      }
+    
+      .t-o-9 {
+        margin-left: 75%;
+      }
+    
+      .t-o-10 {
+        margin-left: 83.33333%;
+      }
+    
+      .t-o-11 {
+        margin-left: 91.66667%;
+      }
+    }
+    
+    @media (min-width: 1024px) and (max-width: 1239px) {
+      .wide {
+        width: 984px;
+      }
+      
+      .row {
+        margin: 0 -12px;
+      }
+      
+      .col {
+        padding: 0 12px;
+      }
+      
+      .l-0 {
+        display: none;
+      }
+    
+      .l-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+        display: block;
+      }
+    
+      .l-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+        display: block;
+      }
+    
+      .l-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        display: block;
+      }
+    
+      .l-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: block;
+      }
+    
+      .l-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        display: block;
+      }
+    
+      .l-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+        display: block;
+      }
+    
+      .l-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: block;
+      }
+    
+      .l-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+        display: block;
+      }
+    
+      .l-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.66667%;
+        display: block;
+      }
+    
+      .l-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+        display: block;
+      }
+    
+      .l-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+        display: block;
+      }
+    
+      .l-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+        display: block;
+      }
+    
+      .l-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: block;
+      }
+    
+      .l-o-1 {
+        margin-left: 8.33333%;
+      }
+    
+      .l-o-2 {
+        margin-left: 16.66667%;
+      }
+    
+      .l-o-3 {
+        margin-left: 25%;
+      }
+    
+      .l-o-4 {
+        margin-left: 33.33333%;
+      }
+    
+      .l-o-5 {
+        margin-left: 41.66667%;
+      }
+    
+      .l-o-6 {
+        margin-left: 50%;
+      }
+    
+      .l-o-7 {
+        margin-left: 58.33333%;
+      }
+    
+      .l-o-8 {
+        margin-left: 66.66667%;
+      }
+    
+      .l-o-9 {
+        margin-left: 75%;
+      }
+    
+      .l-o-10 {
+        margin-left: 83.33333%;
+      }
+    
+      .l-o-11 {
+        margin-left: 91.66667%;
+      }
+    }
+  </style>
+  
+  <style> /* CSS */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      font-family: helvetica , arial , san-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .ct {
+      text-align: center;
+    }
+    
+    .mt-48 {
+      margin-top: 48px !important;
+    }
+    
+    .text-white {
+      color: #fff !important;
+    }
+    
+    .mt-8 {
+      margin-top: 8px;
+    }
+    
+    .mt-16 {
+      margin-top: 16px;
+    }
+    
+    #main {
+      
+    }
+    
+    #header {
+      height: 46px;
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    #nav {
+      
+    }
+    
+    #nav > li {
+      display: inline-block;
+    }
+    
+    #nav li {
+      position: relative;
+    }
+    
+    #nav > li > a {
+      text-transform: uppercase;
+    }
+    
+    #nav li a ,
+    .subnav-mobile li a {
+      text-decoration: none;
+      color: #fff;
+      line-height: 46px;
+      padding: 0 24px;
+      display: inline-block;
+    }
+    
+    #nav > li:hover > a,
+    #nav .subnav li:hover a {
+      background: #ccc;
+      color: #000;
+    }
+    
+    #nav .subnav {
+      position: absolute;
+      top: 46px;
+      left: 0;
+      box-shadow: 0 0 10px rgba(0 ,0 ,0 ,0.3);
+      min-width: 160px;
+      display: none;
+      background: #fff;
+      animation: opCt linear 0.3s;
+    }
+    
+    #nav li:hover .subnav {
+      display: block;
+    }
+    
+    #nav .subnav li a {
+      color: #000;
+      padding: 0 12px;
+      line-height: 38px;
+      display: block;
+    }
+    
+    #nav .subnav li {
+      list-style: none;
+    }
+    
+    .down-icons {
+      font-size: 12px;
+    }
+    
+    .search-box {
+      color: #fff;
+      line-height: 46px;
+      padding: 0 21px;
+    }
+    
+    .search-box:hover {
+      background: #f44336;
+    }
+    
+    #slider {
+      height: 50vw;
+      background: url("/assets/img/slider/slider1.jpg") no-repeat top center/cover;
+      margin-top: 46px;
+      position: relative;
+    }
+    
+    .slider-content {
+      color: #fff;
+      position: absolute;
+      bottom: 46px;
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+    
+    .slider-content h1 {
+      font-weight: 500;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .slider-content p {
+      font-size: 15px;
+    }
+    
+    #content {
+      
+    }
+    
+    .about-content {
+      width: 90%;
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+    
+    .about-heading {
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+    
+    .about-sub-heading {
+      text-align: center;
+      margin-bottom: 15px;
+      font-style: italic;
+      font-size: 15px;
+      opacity: 0.6;
+    }
+    
+    .about-text {
+      font-size: 15px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+    
+    .member-jpg {
+      width: 60%;
+      border-radius: 4px;
+    }
+    
+    .member-item p {
+      margin-bottom: 15px; 
+      font-size: 15px;
+    }
+    
+    .box-tour {
+      background: #000;
+    }
+    
+    .list-tickets {
+      background: #fff;
+    }
+    
+    .tickets-item {
+      color: #757575;
+    }
+    
+    .tickets-item li {
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .sold-out {
+      background: #f44336;
+      color: #fff;
+      padding: 2px 4px;
+      margin-left: 10px;
+    }
+    
+    .quanlity {
+      width: 21px;
+      height: 21px;
+      float: right;
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      line-height: 21px;
+      text-align: center;
+      border-radius: 50%;
+    }
+    
+    .place-item {
+      
+    }
+    
+    .place-item img {
+      width: 100%;
+      display: block;
+    }
+    
+    .place-item img:hover {
+      opacity: 0.6;
+    }
+    
+    .place-content {
+      background: #fff;
+      padding: 16px;
+      width: 100%;
+    }
+    
+    .place-content h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    
+    .place-time {
+      margin-bottom: 15px;
+      font-size: 15px;
+      opacity: 0.6;
+    }
+    
+    .place-text {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    
+    .buy-btn {
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+    }
+    
+    .buy-btn:hover {
+      background: #ccc;
+      color: #000;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .contact-infor i {
+      width: 30px;
+      margin-right: 20px;
+    }
+    
+    .contact-infor {
+      line-height: 1.5;
+      font-size: 18px;
+    }
+    
+    .form-btn {
+      float: right;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+    }
+    
+    .form-btn:hover {
+      background: #ccc;
+      color: #000;
+    }
+    
+    .box-map img {
+      width: 100%;
+    }
+    
+    #footer {
+      min-height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .footer-icons {
+      margin-bottom: 15px;
+    }
+    
+    .footer-icons i {
+      font-size: 20px;
+      color: rgba(0 ,0 ,0 ,0.6);
+    }
+    
+    .footer-text {
+      font-size: 15px;
+      color: rgba(0 ,0, 0 ,0.6);
+    }
+    
+    .footer-text a {
+      color: rgba(0 ,0, 0, 0.6);
+    }
+    
+    .home-nav li a {
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 46px;
+      padding: 0 24px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .home-nav {
+      display: none;
+    }
+    
+    .home-nav li:hover a,
+    .menu-box:hover {
+      background: #ccc;
+      color: #000;
+    }
+    
+    .menu-box {
+      color: #fff;
+      line-height: 46px;
+      padding: 0 21px;
+      display: none;
+    }
+    
+    .overlay-mobile {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
+    }
+    
+    .overlay-container {
+      background: #000;
+      position: fixed;
+      top: 46px;
+      right: 0;
+      width: 100%;
+    }
+    
+    .subnav-mobile li a {
+      text-transform: uppercase;
+      display: block;
+    }
+    
+    .subnav-mobile li {
+      list-style: none;
+    }
+    
+    .overlay-container {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all linear 0.2s;
+    }
+    
+    .subnav-mobile li:hover a {
+      background: #ccc;
+      color: #000;
+    }
+    
+    .input-open:checked ~ .overlay-container {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .input-open:checked ~ .overlay-mobile {
+      display: block;
+    }
+    
+    @keyframes opCt {
+      from {
+        opacity: 0;
+      }
+      
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @media (max-width: 739px) {
+      #nav,
+      .search-box {
+        display: none;
+      }
+      
+      .home-nav,
+      .menu-box {
+        display: block;
+      }
+      
+      .slider-content {
+        display: none;
+      }
+      
+      .full-width {
+        width: 100%;
+      }
+    }
+  </style>
+<head>
+  <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css" title="" type="" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <ul class="home-nav">
+        <li><a href="#">Home</a></li>
+      </ul>
+      <ul id="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#band">Band</a></li>
+        <li><a href="#tour">Tour</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">
+          More
+          <i class="down-icons ti-angle-down"></i>
+        </a>
+          <ul class="subnav">
+            <li><a href="#">Merchendise</a></li>
+            <li><a href="#">Extra</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="search-box">
+        <i class="search-icons ti-search"></i>
+      </div>
+      
+      <label for="input-mobile" class="menu-box">
+        <i class="menu-icons ti-menu"></i>
+      </label>
+      
+      <input type="checkbox" hidden="" class="input-open" name="input-mobile" id="input-mobile" />
+      
+      <label for="input-mobile" class="overlay-mobile"></label>
+      <div class="overlay-container">
+        <ul class="subnav-mobile">
+          <li><a href="#band">Band</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="slider">
+      <div class="slider-content">
+        <h1>Chicago</h1>
+        <p>Thank you, Chicago - A night we won't forget.</p>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div id="band" class="about-content">
+        <h1 class="about-heading">THE BAND</h1>
+        <p class="about-sub-heading">We love music</p>
+        <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        
+        <div class="grid ct mt-48">
+          <div class="row">
+            <div class="col m-12 t-4 l-4 p-4">
+              <div class="member-item mt-16">
+                <p>Name</p>
+                <img src="./assets/img/band/member1.jpg" alt="" class="member-jpg" />
+              </div>
+            </div>
+            
+            <div class="col m-12 t-4 l-4 p-4">
+              <div class="member-item mt-16">
+                <p>Name</p>
+                <img src="./assets/img/band/member1.jpg" alt="" class="member-jpg" />
+              </div>
+            </div>
+            
+            <div class="col m-12 t-4 l-4 p-4">
+              <div class="member-item mt-16">
+                <p>Name</p>
+                <img src="./assets/img/band/member1.jpg" alt="" class="member-jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="box-tour">
+        <div id="tour" class="about-content">
+          <h1 class="about-heading text-white">TOUR DATES</h1>
+          <p class="about-sub-heading text-white">Remember to book your tickets!</p>
+          
+          <div class="list-tickets">
+            <ul class="tickets-item">
+              <li>September <span class="sold-out">Sold out</span></li>
+              <li>October <span class="sold-out">Sold out</span></li>
+              <li>November <span class="quanlity">3</span></li>
+            </ul>
+          </div>
+          
+          <div class="grid mt-48">
+            <div class="row">
+              <div class="col m-12 t-4 l-4 p-4">
+                <div class="place-item mt-16">
+                  <img src="./assets/img/place/place1.jpg" alt="" />
+                  <div class="place-content">
+                    <h3>New York</h3>
+                    <p class="place-time">Fri 27 Nov 2016</p>
+                    <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button type="submit" class="buy-btn">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col m-12 t-4 l-4 p-4">
+                <div class="place-item mt-16">
+                  <img src="./assets/img/place/place2.jpg" alt="" />
+                  <div class="place-content">
+                    <h3>Paris</h3>
+                    <p class="place-time">Sat 28 Nov 2016</p>
+                    <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button type="submit" class="buy-btn">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col m-12 t-4 l-4 p-4">
+                <div class="place-item mt-16">
+                  <img src="./assets/img/place/place3.jpg" alt="" />
+                  <div class="place-content">
+                    <h3>San Francisco</h3>
+                    <p class="place-time">Sun 29 Nov 2016</p>
+                    <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button type="submit" class="buy-btn">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="contact" class="about-content">
+        <h1 class="about-heading">CONTACT</h1>
+        <p class="about-sub-heading">Fan? Drop a note!</p>
+        
+        <div class="grid mt-48">
+          <div class="row">
+            <div class="col m-12 t-6 l-6 p-6">
+              <div class="contact-infor">
+                <p><i class="ti-location-pin"></i>Chicago, US</p>
+                <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                <p><i class="ti-email"></i>Email: mail@mail.com</p>
+              </div>
+            </div>
+            
+            <div class="col m-12 t-6 l-6 p-6">
+              <div class="contact-form mt-16">
+                <div class="row">
+                  <div class="col m-12 l-6 p-6">
+                    <input type="text" placeholder="Name" name="" id="" value="" class="form-control" />
+                  </div>
+                  <div class="col m-12 t-6 l-6 p-6">
+                    <input type="email" placeholder="Email" name="" id="" value="" class="form-control" />
+                  </div>
+                </div>
+                
+                  <div class="row mt-8">
+                    <div class="col m-12 t-12 l-12 p-12">
+                      <input type="text" placeholder="Message" name="" class="form-control" id="" value="" />
+                      <input type="submit" name="" id="" class="form-btn mt-16 full-width" value="SEND" />
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="box-map">
+        <img src="./assets/img/map.jpg" alt="" />
+      </div>
+    </div>
+    
+    <div id="footer">
+      <div class="footer-icons">
+        <i class="ti-facebook"><a href=""></a></i>
+        <i class="ti-instagram"><a href=""></a></i>
+        <i class="ti-youtube"><a href=""></a></i>
+        <i class="ti-linkedin"><a href=""></a></i>
+        <i class="ti-twitter"><a href=""></a></i>
+        <i class="ti-pinterest"><a href=""></a></i>
+      </div>
+      <div class="footer-text">
+        <p>Powered by<a href=""> w3.css</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
